@@ -1,0 +1,35 @@
+{
+  "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "@hotwired/stimulus": "^3.0.0",
+    "@symfony/stimulus-bridge": "^3.2.0",
+    "@symfony/ux-react": "file:vendor/symfony/ux-react/assets",
+    "@symfony/webpack-encore": "^4.6.1",
+    "file-loader": "^6.2.0",
+    "react": "^18.0",
+    "react-dom": "^18.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-notifier": "^1.15.0"
+  },
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.10",
+    "@mui/material": "^5.15.10",
+    "@mui/material-next": "^6.0.0-alpha.122",
+    "animate.css": "^4.1.1",
+    "core-js": "^3.35.1",
+    "framer-motion": "^11.0.5",
+    "gsap": "^3.12.5"
+  }
+}

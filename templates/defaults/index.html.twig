@@ -1,0 +1,346 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <header class="header">
+        <section class="header__intro intro">
+            <div class="intro__textes">
+                <h1 class="intro__titre " >Victoria Tandamba
+                Développeuse Full Stack </h1>
+                <p class="intro__texte"> {{ 'profil'|trans }} </p>
+
+                <div class="animate__animated animate__bounceIn" {{ react_component('Button', { 'contenue': 'decouvrir'|trans } ) }}>
+            </div>
+
+</div>
+            <img class="intro__image animate__animated animate__bounceIn" src="{{ asset('build/images/profil.png') }}" alt="profil">
+        </section>
+
+
+        <section class="header__resumer resumer nav">
+            <input class="nav__input" type="checkbox" id="icone-burger-close">
+            <label class="nav__button" for="icone-burger-close"></label>
+
+<div class="nav__menu">
+    {# reseau sociaux #}
+    <div class="social-buttons">
+        <a href="#"  class="social-button social-button--linkedin" aria-label="LinkedIn"  {{ react_component('InIcone') }}>
+        </a>
+        <a href="#" class="social-button social-button--github" aria-label="GitHub" {{ react_component('GitIcone') }}>
+        </a>
+        <a href="#" class="social-button social-button--web" aria-label="Web" {{ react_component('WebIcone') }}>
+        </a>
+    </div>
+
+    <div class="container">
+        {# <h3 class="titresH3">compétences </h3>#}
+        <p class="p__head"> HTML <span class="percentage"> 90% </span></p>
+        <div class="progress2 progress-moved">
+            <div class="progress-html" >
+            </div>
+        </div>
+        <p class="p__head"> CSS <span class="percentage"> 90% </span></p>
+        <div class="progress2 progress-moved">
+            <div class="progress-css" >
+            </div>
+        </div>
+        <p class="p__head"> PHP <span class="percentage"> 70% </span></p>
+        <div class="progress2 progress-moved">
+            <div class="progress-js" >
+            </div>
+        </div>
+        <p class="p__head"> JS <span class="percentage"> 70% </span></p>
+        <div class="progress2 progress-moved">
+            <div class="progress-js" >
+            </div>
+        </div>
+        <p class="p__head"> SQL <span class="percentage"> 80% </span></p>
+        <div class="progress2 progress-moved">
+            <div class="progress-sql" >
+            </div>
+        </div>
+        <p class="p__head"> WP <span class="percentage"> 50% </span></p>
+        <div class="progress2 progress-moved">
+            <div class="progress-wp" >
+            </div>
+        </div>
+    </div> {# intérets #}
+
+    <div {{ react_component('DownloadButton', {'contenue': 'cv'|trans}) }}> </div>
+</div>
+
+         </section>
+
+
+
+        <section class="header__menu menu ">
+            <img src="" alt="">
+            <nav>
+
+                <ul class="ul">
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a" href="{{ path('app_default') }}">
+                         <p class="menu__icones" {{ react_component('HomeIcone') }}>  </p>
+                            <span>{{'accueil'|trans }}</span>
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a" href="{{ path('app_default') }}#formation">
+                            <p class="menu__icones" {{ react_component('FormationIcone') }}>  </p>
+                            <span>{{ 'formations'|trans }}</span>
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a" href="{{ path('app_default') }}#competence">
+                        <p class="menu__icones" {{ react_component('DevIcone') }} ></p>
+                            <span>{{ 'competences'|trans }}</span>
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a" href="{{ path('app_default') }}#realisation">
+                            <p class="menu__icones" {{ react_component('RealistationIcon') }}>  </p>
+                            <span>{{ 'realisations'|trans }}</span>
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a"href="{{ path('app_default') }}#contact">
+                            <p class="menu__icones" {{ react_component('FormIcone') }}>  </p>
+                            <span>{{ 'contacts'|trans }}</span>
+                        </a>
+                    </li>
+
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a" href="tel:0651850924">
+                            <p class="menu__icones" {{ react_component('TelIcone') }}>  </p>
+                            <span>{{ 'tel'|trans }}</span>
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a"href="mailto:tandambav@yahoo.com">
+                            <p class="menu__icones" {{ react_component('MailIcone') }}>  </p>
+                            <span>{{ 'mail'|trans }}</span>
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a class="social-button social-button--linkedin a" href="#">
+                            <p class="menu__icones" {{ react_component('MentionIcone') }}>  </p>
+                            <span>{{ 'mentions'|trans }}</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </section>
+
+    </header>
+    <main class="section" >
+        <!-- formation -->
+        <h2 class="titresH2" id="formation"> {{ 'formation'|trans }} </h2>
+        <p class="section__description"> {{ 'formation_label'|trans }} </p>
+
+        <section class="formation" >
+
+            <!-- formation presentation -->
+            <article class="intitule">
+                <div class="intitule__label label ">
+                    <h3 class="label__titre titresH3">{{ 'formation_titre3'|trans }} </h3>
+                    <p class="label__statut"> {{ 'statut3'|trans }} <span class="label__annee">2023 - 2024</span> </p>
+                    <img class="petiteImage"   src="{{ asset('build/images/R.027cf6fd.png') }}" alt="">
+                </div>
+
+                <div class="intitule__details details">
+                    <h3 class="details__titre titresH3">{{ 'formation_description3'|trans }} </h3>
+                    <p class="details__description">  {{ 'formation_texte3'|trans }}
+                    </p>
+                </div>
+            </article>
+
+            <article class="intitule">
+                <div class="intitule__label label ">
+                    <h3 class="label__titre titresH3">{{ 'formation_titre2'|trans }} </h3>
+                    <p class="label__statut"> {{ 'statut2'|trans }} <span class="label__annee">2021 - 2023</span> </p>
+                    <img class="petiteImage" src="{{ asset('build/images/futaie.4802bd75.jpg') }}" alt="">
+                    <img class="petiteImage" src="{{ asset('build/images/sorefa.bd610119.png') }}" alt="">
+
+                </div>
+
+                <div class="intitule__details details">
+                    <h3 class="details__titre titresH3">{{ 'formation_description2'|trans }} </h3>
+                    <p class="details__description">  {{ 'formation_texte2'|trans }}
+                    </p>
+                </div>
+            </article>
+
+            <article class="intitule">
+                <div class="intitule__label label ">
+                    <h3 class="label__titre titresH3">{{ 'formation_titre1'|trans }} </h3>
+                    <p class="label__statut"> {{ 'statut1'|trans }} <span class="label__annee">2021 - 2023</span> </p>
+                    <img class="petiteImage" src="{{ asset('build/images/futaie.4802bd75.jpg') }}" alt="">
+
+                </div>
+
+                <div class="intitule__details details">
+                    <h3 class="details__titre titresH3">{{ 'formation_description1'|trans }} </h3>
+                    <p class="details__description">  {{ 'formation_texte1'|trans }}
+
+                    </p>
+                </div>
+            </article>
+        </section>
+
+    <!-- competences -->
+        <!-- compétences presentation -->
+        <h2 class="titresH2" id="competence"> {{'compétences'|trans}} </h2>
+        <p class="section__description" >{{ 'competence_label'|trans }}</p>
+
+        <section class="competences" >
+
+        <!-- competences listes -->
+
+            <figure class="competence">
+                <img src="{{ asset('build/images/HTML.49c1cbb7.png') }}"  alt="competences">
+                <figcaption>
+                    <h3 class="titresH3">Html</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+            <figure class="competence">
+                <img src="{{ asset('build/images/UX.68d082ec.png') }}"  alt="competences">
+                <figcaption>
+                    <h3 class="titresH3">Ux</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+            <figure class="competence">
+                <img src="{{ asset('build/images/php_2393239.png') }}"  alt="competences">
+                <figcaption>
+                    <h3 class="titresH3">php</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+            <figure class="competence">
+                <img src="{{ asset('build/images/java_3040758.png') }}"  alt="competences">
+                <figcaption>
+                    <h3> java</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+
+            <figure class="competence">
+                <img src="{{ asset('build/images/database_3040702.png') }}"  alt="competences">
+                <figcaption>
+                    <h3> data</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+            <figure class="competence">
+                <img width="200" height="200" src="{{ asset('build/images/css_2393220.png') }}" alt="html"/>
+                <figcaption>
+                    <h3> css</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+            <figure class="competence">
+                <img src="{{ asset('build/images/connection_3040688.png') }}"  alt="competences">
+                <figcaption>
+                    <h3> git </h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+            <figure class="competence">
+                <img src="{{ asset('build/images/atom_5144785.383abd84.png') }}"  alt="competences">
+                <figcaption>
+                    <h3> React</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+            <figure class="competence">
+                <img src="{{ asset('build/images/computer_3040640.png') }}"  alt="competences">
+                <figcaption>
+                    <h3> Api</h3>
+                    <p>competence description</p>
+                </figcaption>
+            </figure>
+
+        </section>
+
+
+        <!-- realisations -->
+        <!-- realisation presentation -->
+
+        <h2 class="titresH2" id="realisation"> {{ 'realisation'|trans }}</h2>
+        <p class="section__description">{{ 'realisation_label'|trans}}</p>
+
+        <section class="realisations">
+            <figure class="realisation">
+                <img class="realisation__image" src="{{ asset('build/images/ptojet1.73f0319c.png') }}" alt="réalisation">
+                <figcaption class="realisation__legende">
+                    <h3 class="titresH3">{{ 'realisation_titre1'|trans }}</h3>
+                    <p class="realisation__description">{{ 'realisation_description1'|trans }}</p>
+                    <p class="realisation__technologies">Technologies utilisées : HTML, CSS, JavaScript</p>
+                </figcaption>
+            </figure>
+
+            <figure class="realisation">
+                <img class="realisation__image" src="{{ asset('build/images/artfullcode.b34c4f1d.png') }}" alt="réalisation">
+                <figcaption class="realisation__legende">
+                    <h3 class="titresH3">{{ 'realisation_titre2'|trans }}</h3>
+                    <p class="realisation__description">{{ 'realisation_description2'|trans }}</p>
+                    <p class="realisation__technologies">Technologies utilisées : HTML, CSS, JavaScript</p>
+                </figcaption>
+            </figure>
+
+            <figure class="realisation">
+                <img class="realisation__image" src="{{ asset('build/images/taskWall.98d5a70c.png') }}" alt="réalisation">
+                <figcaption class="realisation__legende">
+                    <h3 class="titresH3">{{ 'realisation_titre4'|trans }}</h3>
+                    <p class="realisation__description">{{ 'realisation_description4'|trans }}</p>
+                    <p class="realisation__technologies">Technologies utilisées : HTML, CSS, JavaScript</p>
+                </figcaption>
+            </figure>
+
+            <a class="centre" href="#">
+                <div {{ react_component('Button', {'contenue' : 'voirPlus'|trans}) }}></div>
+            </a>
+        </section>
+
+
+    </main>
+    <footer class="section">
+        <h2 class="titresH2" >contactez - moi</h2>
+        {#// alert a afficher suite à la soumission du formulaire
+
+
+        {# Afficher l'alerte si un message flash de type 'success' existe #}
+        {# Afficher l'alerte si un message flash de type 'success' existe #}
+        {% if app.flashes('success') %}
+            <div {{ react_component('SimpleAlert',{ 'alert': contenuAlertSuccess } ) }}> </div>
+        {% elseif app.flashes('error') %}
+            <div {{ react_component('AlertError',{ 'alert': contenuAlertEchec } ) }}> </div>
+        {% endif %}
+
+
+        {{ form_start(form, {'attr': {'id': 'monFormulaire'}}) }}
+        {{ form_row(form.nom, {'label': 'form.nom'|trans }) }}
+        {{ form_row(form.email, {'label': 'form.email'|trans }) }}
+        {{ form_row(form.object, {'label': 'form.object'|trans }) }}
+        {{ form_row(form.message, {'label': 'form.message'|trans }) }}
+        {{ form_end(form) }}
+
+
+
+{#    <form action="{{ path('app_homepage') }}" method="post">
+            <label for="nom">Nom <input type="text" name="nom" id="nom"></label>
+            <label for="prenom">Prénom <input type="text" name="prenom" id="prenom"></label>
+            <label for="sujet">Sujet <input type="text" name="sujet" id="sujet"></label>
+            <label for="message">Votre message </label> <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <input type="submit" value="Valider"/>
+        </form> #}
+
+        <p class="copyright">2024 @ Réalisé par Victoria Tandamba</p>
+    </footer>
+
+
+
+
+{% endblock %}

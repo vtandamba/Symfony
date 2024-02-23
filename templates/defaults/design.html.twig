@@ -1,0 +1,23 @@
+{# <div class="alert alert-{{ type }} alert-dismissible" role="alert">
+    <twig:Icon name="{{ this.icon }}" class="me-2" />
+    {{ message }}
+
+    {% if type == 'success' %}
+        <a href="{{ path('app_packages') }}" class="alert-right-message">
+            (browse all {{ this.packageCount }} packages)
+        </a>
+    {% endif %}
+</div> #}
+
+<!-- Votre contenu de page ici -->
+<div class="loader" id="loader">
+    <div class="inner one"></div>
+    <div class="inner two"></div>
+    <div class="inner three"></div>
+</div>
+
+
+<div class="hero">
+    <!-- Aucun cube ici, ils seront générés dynamiquement par JavaScript -->
+</div>
+

@@ -1,0 +1,57 @@
+# translations/messages.en.yaml
+form:
+  nom: Name
+  email: Email
+  object: Subject
+  message: Message
+  submit: Send
+
+profil: Passionate student in Full Stack development, determined to push technological boundaries while merging creativity and technical skills to design remarkable user experiences.
+
+cv: Download my resume
+decouvrir: Discover Me
+formation: My Education
+
+formation_titre3: lp miaw
+formation_titre2: bts sio I & II
+formation_titre1: bts sio I & II
+
+formation_titre: Education Title
+formation_label: I am delighted to present an overview of my academic journey and learning experiences that have fueled my passion for Full Stack development. My education has served as a catalyst, providing a conducive environment for the growth of my skills and the refinement of my expertise in this dynamic field.
+
+formation_description3: Bachelor's degree in Full Stack development
+formation_texte3: The Full Stack development program at the University of La Rochelle has allowed me to acquire comprehensive expertise in web design and development, covering both front-end and back-end aspects. Through practical projects and quality supervision, I have been able to develop my technical skills while nurturing my creativity and innovation capacity.
+statut3: student
+
+formation_description2: Intern at Sorefa SARL
+formation_texte2: During my studies, I also completed an internship as a trainee at Sorefa SARL, where I had the opportunity to work on the development of a backend application for quote management. This internship allowed me to apply the knowledge acquired in class and deepen my skills in software solution development.
+statut2: trainee
+
+formation_description1: BTS SIO SLAM
+formation_texte1: Pursued at Campus La Futaie in Bressuire, I gained in-depth expertise in developing software solutions and business applications. This practical and specialized training enabled me to strengthen my programming skills, application design, and project management, effectively preparing me to enter the professional world as a developer or specialized IT technician.
+statut1: student
+
+realisation: My Achievements
+realisation_label: By combining my front-end and back-end development skills with my passion for intuitive interface design, I have created a diverse range of digital projects that reflect my commitment to delivering exceptional user experiences.
+
+realisation_titre1: Portfolio
+realisation_description1: A responsive website redesign
+realisation_titre2: Artfull Code
+realisation_description2: An agency website
+realisation_titre3: B A Ba
+realisation_description3: Client website
+realisation_titre4: TrustWallet
+realisation_description4: A site that combines task and expense management
+
+competence: My Skills
+competence_label: I am skilled in front-end and back-end development, using databases, frameworks for client-side architecture, and CMS for content management. In terms of user interface (UI) design and user experience (UX), I have gained expertise, enabling me to create comprehensive solutions that combine intuitive interfaces with solid technical architecture.
+
+competence_titre: Education Title
+competence_description: Education Description
+
+contact: Contact Me
+contact_alertEr: Message not sent
+contact_alertS: Message sent successfully
+envoie: Send
+
+voirPlus: See More

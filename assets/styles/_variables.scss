@@ -1,0 +1,35 @@
+$fond :  #FEEDF5 ;
+$border_fond :   #FFB7B7 ;
+$accent :  #F5A39F ;
+$accent_f: #A3404D;
+$accent_active :  #DA8FB1;
+$light_fond : #FAFAFA;
+$boder_line : #F0F0F6;
+
+@mixin titreH2() {
+font : {
+  size: 2vw;
+}
+text-transform: capitalize;
+  text-align: center;
+}
+@mixin titreH3() {
+  font : {
+    size: 1.5vw;
+  }
+  text-transform: capitalize;
+}
+
+@mixin  bg() {
+  background: linear-gradient(135deg, #F5A39F, #FAFAFA); /* Dégradé de fond */
+}
+@mixin bordure(){
+  border: 1px solid #FFB7B7;
+}
+
+.petiteImage {
+  padding-top: 2vh;
+  max-width: 70px; /* Largeur maximale de l'image */
+  max-height: 70px; /* Hauteur maximale de l'image */
+}
+

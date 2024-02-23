@@ -1,0 +1,81 @@
+@import "variables";
+
+// style du main
+.section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: auto;
+  margin-left: 15.5vw;
+  margin-right: 12vw;
+  // remonter la section main
+  bottom: 20vh;
+  width: inherit;
+  &__description {
+    text-align: center;
+    margin: {
+      right: 10vw;
+      left: 10vw;
+      top: 3vw;
+      bottom: 3vw;
+    }
+  }
+}
+
+
+// style de formations
+.titresH2{
+  @include titreH2()
+}
+.titresH3{
+  @include titreH3()
+ }
+
+
+
+.formation{
+  background-color: $light_fond;
+  padding: 2vw;
+  margin-bottom: 15vh;
+}
+// style des intitulés
+.intitule{
+  display: flex;
+  width: 100%;
+   gap: 14vw;
+&:not(:last-child)
+{
+  padding-bottom: 2vh;
+
+  border-bottom:1.5px solid $boder_line;
+}
+  &:not(:first-child){
+     padding-top: 2vh;
+  }
+  .label{
+
+  }
+  .details{
+
+  }
+}
+.label {
+  &__titre{
+    width: 15vw;
+    padding-bottom: 1.5vw;
+  }
+  &__status{
+
+  }
+  &__annee{
+
+  }
+}
+.details {
+  &__titre{
+    padding-bottom: 1.5vw;
+  }
+&__description{
+
+}
+}

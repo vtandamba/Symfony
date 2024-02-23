@@ -1,0 +1,76 @@
+# translations/messages.fr.yaml
+form:
+  nom: Nom
+  email: Email
+  object: Objet
+  message: Message
+  submit: Envoyer
+
+profil:   Étudiante passionnée en développement Full Stack,
+          résolue à repousser les frontières technologiques tout en 
+          fusionnant créativité et compétence technique pour concevoir 
+          des expériences utilisateur remarquables.
+
+cv:  Télécharger mon cv
+decouvrir : Me découvrir
+formation: ma formation
+
+formation_titre3: lp miaw
+formation_titre2: bts sio I & II
+formation_titre1: bts sio I & II
+formation_label: Je suis ravie de vous présenter un aperçu de mon parcours académique 
+                        et des expériences d'apprentissage qui ont nourri ma passion pour le 
+                        développement Full Stack.Parcours a servi de catalyseur, offrant un terrain 
+                        propice à l'épanouissement de mes compétences et à l'affinement de mon expertise 
+                        dans ce domaine dynamique.
+
+formation_description3: Licence Pro dévelopement fullStack
+formation_texte3: La formation en développement Full Stack à l'Université de La Rochelle m'a permis d'acquérir 
+                  une expertise complète en conception et développement web, en couvrant à la fois les aspects 
+                  front-end et back-end. Grâce à des projets pratiques et un encadrement de qualité, j'ai pu développer mes compétences techniques tout en cultivant ma créativité et ma capacité d'innovation
+statut3: étudiante
+
+formation_description2: stagiaire à Sorefa sarl
+formation_texte2: Pendant ma formation, j'ai également effectué un stage en tant que stagiaire à 
+                  Sorefa Sarl, où j'ai eu l'opportunité de travailler sur le développement d'une application 
+                  backend de gestion de devis. Ce stage m'a permis de mettre en pratique mes connaissances acquises en classe et d'approfondir mes compétences en développement de solutions logicielles.
+statut2: stagiaire
+
+formation_description1: BTS SIO SLAM
+formation_texte1: Suivie au campus La Futaie à Bressuire, j'ai acquis une expertise approfondie en développement 
+                  de solutions logicielles et d'applications métiers. Cette formation pratique et spécialisée 
+                  m'a permis de consolider mes compétences en programmation, en conception d'applications et en gestion 
+                  de projets informatiques, me préparant ainsi efficacement à intégrer le monde professionnel en tant que développeur ou technicien informatique spécialisé.
+statut1: étudiante
+
+realisation: mes réalistaions
+realisation_label: En combinant mes compétences en développement front-end et back-end avec mon intérêt pour le design d'interfaces 
+                    intuitives, j'ai créé une gamme diversifiée de projets numériques qui reflètent mon engagement 
+                    à offrir des expériences utilisateur exceptionnelles
+
+realisation_titre1:  portfolio
+realisation_description1: une refonte de site responsive
+realisation_titre2: Artfull Code
+realisation_description2: un site d'agence
+realisation_titre3: B A Ba
+realisation_description3: site pour un client
+realisation_titre4: TrustWallet
+realisation_description4: un site qui combine votre gestion de tache et de dépense
+
+
+competence: mes compétences
+competence_label: Je suis compétente en développement front-end et back-end, utilisant des bases de données, 
+                  des frameworks pour l'architecture côté client, et des CMS pour la gestion de contenu. 
+                  En ce qui concerne la conception d'interfaces utilisateur (UI) et l'expérience utilisateur (UX), 
+                  j'ai acquis une certaine expertise, ce qui me permet de créer des solutions complètes 
+                  combinant une interface intuitive à une solide architecture technique.
+
+competence_titre: titre de formation
+competence_description: formation description
+
+contact: Contactez - moi
+contact_alertEr: Message non envoyé
+contact_alertS: Message bien envoyé
+envoie: Envoyer
+
+voirPlus: Voir Plus

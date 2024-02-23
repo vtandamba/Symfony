@@ -1,0 +1,150 @@
+
+//  .cube {
+//    position: fixed;
+//    width: 10px;
+//    height: 10px;
+//    border: solid 1px darken($accent_f, 8%);
+//    transform-origin: top left;
+//    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+//    animation:   cubeMove  12s ease-in forwards infinite;
+//    z-index: -1;
+//  }
+
+//  @keyframes cube {
+//    from {
+//      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+//      opacity: 1;
+//    }
+//    to {
+//      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+//      opacity: 0;
+//    }
+//  }
+
+  @keyframes cubeMove {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(100vw, 100vh); /* Ajustez la distance de déplacement des cubes */
+    }
+  }
+  .red {
+    border: $accent_f 1px solid;
+  }
+
+  .blue {
+    border: $light_fond 1px solid;
+
+  }
+
+
+
+
+/* Animation pour faire descendre les cubes de haut en bas */
+@keyframes cubeMoveDown {
+  0% {
+    transform: translateY(-100%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(10);
+    opacity: 2;
+  }
+}
+
+
+
+/* Animation pour un mouvement de rebondissement */
+@keyframes cubeBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animation pour un mouvement en zigzag */
+@keyframes cubeZigzag {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+/* Appliquer différentes animations à chaque cube */
+.cube {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  z-index: -1; /* Placer les cubes en arrière-plan */
+  animation-duration: 5s; /* Durée de l'animation */
+  animation-iteration-count: infinite; /* Animation en boucle */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animation pour les cubes rouges */
+.red {
+  animation-name: cubeMoveDown, cubeBounce; /* Combinaison de deux animations */
+  border: $accent_f 1px solid;
+}
+
+/* Animation pour les cubes bleus */
+.blue {
+  animation-name: cubeMoveDown, cubeZigzag; /* Combinaison de deux animations */
+  border: $light_fond 1px solid;
+}
+
+/* Appliquer différentes animations et styles aux cubes montant */
+.up {
+  animation-name: cubeMoveUp ;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+
+}
+
+/* Appliquer différentes animations et styles aux cubes descendant */
+.down {
+  animation-name: cubeMoveDown;
+  animation-play-state: running;
+}
+
+/* Appliquer la rotation à certains cubes */
+.rotate {
+  animation-name: cubeRotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+
+/* Animation pour faire monter les cubes de bas en haut */
+@keyframes cubeMoveUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+}
+
+/* Animation pour la rotation des cubes */
+@keyframes cubeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,380 @@
+@import "variables";
+body {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Dégradé de couleur pour l'effet de verre */
+  scrollbar-width: thin;
+  scrollbar-color: $boder_line $accent;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: auto;
+  &__intro{
+    flex-basis: 85%;
+    min-height: 20vh;
+    order: 2;
+    padding-bottom: 1vh;
+    background-color: $accent;
+    padding : {
+      top: 5vw;
+      right: 5vw;
+      left: 5vw;
+      bottom: 5vw;
+    }
+  }
+  &__resumer{
+    order: 1;
+    flex-basis: 20%;
+    // margin-right: 1.7vw;
+    // background-color: $accent;
+    // min-height: 100vh;
+    // position: sticky;
+    // text-align: center;
+    // height: 100%;
+  }
+  &__menu{
+    order: 3;
+    text-align: center;
+    margin-left: 2vw;
+
+    background-color: $accent;
+    min-height: 100vh;
+    position: fixed;
+    height: 100%;
+    right: 0;
+
+  }
+
+}
+.intro{
+  display: flex;
+
+  margin-right: 8vw;
+  &__titre{
+    width: 70%;
+    margin-bottom: 1vw;
+    font:{
+      size: 2.5vw;
+    }
+    color: black;
+  }
+  &__texte{
+    color: $fond;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+
+  }
+  &__image{
+    width: 20vw;
+    min-height: 20vw;
+    margin-right: 5vw;
+
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Dégradé de couleur pour l'effet de verre */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure pour l'effet de relief */
+    border-radius: 10px; /* Arrondir les coins */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de relief */
+  }
+  &__textes{
+    width: 60%;
+    margin-right: 5vw;
+  }
+
+}
+.boutton{
+
+
+}
+.menu{
+  &__icones{
+    width: 10vw;
+    &:hover{
+      //  color: $accent_active;
+
+    }
+  }
+}
+
+
+// icones
+
+
+.li:nth-child(6) {
+  margin-top: 5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $accent_f;
+}
+
+.a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+  position: relative;
+  padding: 2vw;
+  margin: 1vw;
+
+  &:hover, &:focus, &.active {
+
+    // background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Dégradé de couleur pour l'effet de verre */
+    // border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure pour l'effet de relief */
+    // border-radius: 10px; /* Arrondir les coins */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de relief */
+
+
+    outline: 0;
+
+    span {
+      transform: scale(1);
+      opacity: 1;
+      color: #000;
+    }
+  }
+
+
+  span {
+    position: absolute;
+    z-index: 15;
+border: $accent_f solid 1px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Dégradé de couleur pour l'effet de verre */
+    //border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure pour l'effet de relief */
+    border-radius: 10px; /* Arrondir les coins */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de relief */
+
+
+
+    white-space: nowrap;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+    right: calc(100% + 1.5rem);
+    transform-origin: center left;
+    transform: scale(0);
+    opacity: 0;
+    min-height: 4vh;
+    transition: .15s ease;
+    &:before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+
+
+      background: linear-gradient(45deg,$fond, rgba(255, 255, 255, 0.2)); /* Dégradé de couleur pour l'effet de verre */
+      // border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure pour l'effet de relief */
+      // border-radius: 10px; /* Arrondir les coins */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de relief */
+
+
+      right: -5px;
+      top: 50%;
+      transform: translatey(-50%) rotate(45deg);
+      border-radius: 3px;
+    }
+  }
+
+
+}
+
+
+
+/// compétences
+
+.container {
+
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  padding: 0 1vw;
+}
+.progress2 {
+  padding: 3px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  height: 2vh;
+}
+
+.progress-html , .progress-css,.progress-js, .progress-sql, .progress-wp{
+  //height: 18px;
+  height: 1vh;
+
+  border-radius: 30px;
+  background-image:
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+.progress-html {
+  animation: progressHtmlAnimation 6s;
+}
+.progress-css {
+  animation: progressCssAnimation 6s;
+}
+.progress-js {
+  animation: progressJsAnimation 6s;
+}.progress-sql {
+   animation: progressSqlAnimation 6s;
+ }.progress-wp {
+    animation: progressWpAnimation 6s;
+  }
+
+
+
+.progress-moved .progress-html{
+  width: 90%;
+  background-color: #06D6A0;
+  animation: progressHtmlAnimation 6s;
+}
+
+.progress-moved .progress-css{
+  width: 90%;
+  background-color: #06D6A0;
+  animation: progressCssAnimation 6s;
+}
+.progress-moved .progress-js {
+  width: 70%;
+  background-color: #ffc266;
+  animation: progressJsAnimation 6s;
+}.progress-moved .progress-sql {
+   width: 80%;
+   background-color: #ffab66;
+   animation: progressSqlAnimation 6s;
+ }.progress-moved .progress-wp {
+    width: 50%;
+    background-color: #FFD166;
+    animation: progressWpAnimation 6s;
+  }
+
+@keyframes progressAnimation {
+  0%   { width: 5%; background-color: #F9BCCA;}
+  100% { width: 85%; background-color: #EF476F; }
+}
+/* Définissez les animations pour chaque compétence en fonction du pourcentage */
+@keyframes progressHtmlAnimation {
+  0%   { width: 5%; background-color: #EF476F; }
+  100% { width: 90%; background-color: #06D6A0; }
+}
+
+@keyframes progressCssAnimation {
+  0%   { width: 5%; background-color: #EF476F; }
+  100% { width: 90%; background-color: #06D6A0; }
+}
+
+@keyframes progressJsAnimation {
+  0%   { width: 5%; background-color: #EF476F; }
+  100% { width: 70%; background-color: #FFD166; }
+}
+
+@keyframes progressSqlAnimation {
+  0%   { width: 5%; background-color: #EF476F; }
+  100% { width: 80%; background-color: #FFD166; }
+}
+
+@keyframes progressWpAnimation {
+  0%   { width: 5%; background-color: #EF476F; }
+  100% { width: 50%; background-color: #F9BCCA; }
+}
+
+/* Ajoutez des animations pour d'autres compétences si nécessaire */
+
+
+
+// reseau  sociaux
+
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+$social-button-size: 64px;
+$social-button-icon-size: 0.4;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+
+$social-button-colors: (
+        'web': $accent_f,
+        '': $accent_f,
+        'linkedin': $accent_f,
+        'github': $accent_f,
+        'codepen': $accent_f,
+        'steam': #7da10e,
+        'snapchat': #eec900,
+        'twitter': #55acee,
+        'instagram': #e4405f,
+        'npmjs': #c12127,
+);
+
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 2.5vw;
+  height: 2.5vw;
+  text-decoration: none;
+  border-radius: 100%;
+  background: linear-gradient(45deg,$fond, rgba(255, 255, 255, 0.2)); /* Dégradé de couleur pour l'effet de verre */
+
+  text-align: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: $social-button-transition-time;
+  }
+
+  &:focus,
+  &:hover {
+    color: $social-button-active-color;
+
+    &::after {
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      margin-left: calc(-50% - 1px);
+    }
+  }
+
+  i,
+  svg {
+    position: relative;
+    z-index: 1;
+    transition: $social-button-transition-time;
+  }
+
+  i {
+    font-size: $social-button-size * $social-button-icon-size;
+  }
+
+
+
+
+  @each $name, $color in $social-button-colors {
+    &--#{$name} {
+      color: $color;
+
+      &::after {
+        background: $color;
+      }
+    }
+  }
+}
