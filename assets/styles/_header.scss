@@ -57,7 +57,7 @@ body {
     width: 70%;
     margin-bottom: 1vw;
     font:{
-      size: 2.5vw;
+      size: 3vw;
     }
     color: black;
   }
@@ -65,12 +65,13 @@ body {
     color: $fond;
     margin-bottom: 2vw;
     margin-top: 2vw;
-
+    font:{
+      size: 1.5vw;
+    }
   }
   &__image{
     width: 20vw;
     min-height: 20vw;
-    margin-right: 5vw;
 
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Dégradé de couleur pour l'effet de verre */
     border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure pour l'effet de relief */
