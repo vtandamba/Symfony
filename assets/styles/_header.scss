@@ -83,10 +83,8 @@ body {
   }
 
 }
-.boutton{
 
 
-}
 .menu{
   &__icones{
     width: 10vw;
@@ -178,7 +176,9 @@ border: $accent_f solid 1px;
       border-radius: 3px;
     }
   }
-
+.span{
+  @extend span;
+}
 
 }
 
@@ -190,10 +190,7 @@ border: $accent_f solid 1px;
 
   width: 100%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
-  padding: 0 1vw;
+
 }
 .progress2 {
   padding: 3px;
@@ -378,3 +375,60 @@ $social-button-colors: (
     }
   }
 }
+
+
+
+// drop
+/* Styles pour le bouton de sélection de langue */
+.language-button {
+  position: relative;
+}
+
+// .rounded-button {
+//   border-radius: 20px;
+//   padding: 10px 20px;
+//   background-color: #007bff;
+//   color: white;
+//   border: none;
+//   cursor: pointer;
+// }
+
+.language-dropdown {
+  display: none;
+  transition: opacity 1s ease;
+
+// margin-top: 5px;
+// padding: 5px 0;
+// background-color: white;
+// border-radius: 10px;
+// box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.language-dropdown li {
+ // list-style: none;
+}
+
+// .language-dropdown li a {
+//   display: block;
+//   padding: 10px;
+//   text-decoration: none;
+//   color: black;
+// }
+
+//.language-dropdown li a:hover {
+//  background-color: #f0f0f0;
+//}
+
+.language-button:hover .language-dropdown {
+  display: block;
+  opacity: 1;
+
+}
+
+/* Ajout des styles pour le bouton de langue dans le menu social */
+// .social-buttons .language-button {
+//   margin-top: 5rem;
+//   padding-top: 1.25rem;
+//   border-top: 1px solid $accent_f;
+// }
+

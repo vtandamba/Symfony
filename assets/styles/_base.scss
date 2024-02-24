@@ -11,18 +11,52 @@ html {
 @include bg
 }
 
-@font-face {
-  font-family: 'dosis-bold';
-  src: url(../font/dosis-bold-webfont.woff2) format('woff');
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+@media screen and (min-width: 1150px) {
+  html {
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  }
 }
 
 
+@font-face {
+  font-family: 'dosis-bold';
+  src: url(../font/dosis-bold-webfont.woff2) format('woff');
+  src: url(../font/dosis-bold-webfont.woff) format('woff');
+}
+@font-face {
+  font-family: 'dosis-light';
+  src: url(../font/dosis-light-webfont.woff) format('woff');
+  src: url(../font/dosis-light-webfont.woff2) format('woff');
+}
+@font-face {
+  font-family: 'dosis-extralight';
+  src: url(../font/dosis-extralight-webfont.woff) format('woff');
+  src: url(../font/dosis-extralight-webfont.woff2) format('woff');
+}
+@font-face {
+  font-family: 'dosis-regular';
+  src: url(../font/dosis-regular-webfont.woff) format('woff');
+  src: url(../font/dosis-regular-webfont.woff2) format('woff');
+}@font-face {
+  font-family: 'dosis-medium';
+  src: url(../font/dosis-medium-webfont.woff) format('woff');
+  src: url(../font/dosis-medium-webfont.woff2) format('woff');
+}@font-face {
+  font-family: 'dosis-regular';
+  src: url(../font/dosis-semibold-webfont.woff) format('woff');
+  src: url(../font/dosis-semibold-webfont.woff2) format('woff');
+}
 
 body * {
   font-size: 1.4rem;
   // padding-left: 2vw;
   /* 14px par défaut */
-  font-family: 'dosis-bold', sans-serif;
+  font-family: 'dosis-regular', sans-serif;
 
 }
 body{
@@ -44,13 +78,5 @@ img {
 
 .opacity {
   color: rgba(200, 200, 200, 0.5);
-}
-
-// mes classes de base
-.centre{
-  width: inherit; /* ajuster la largeur selon vos besoins */
-  margin-left: auto;
-  margin-right: auto;
-
 }
 

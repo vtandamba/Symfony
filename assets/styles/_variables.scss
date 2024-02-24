@@ -6,9 +6,21 @@ $accent_active :  #DA8FB1;
 $light_fond : #FAFAFA;
 $boder_line : #F0F0F6;
 
+
+
+.centre{
+  width: inherit; /* ajuster la largeur selon vos besoins */
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 @mixin titreH2() {
+  padding-top: 3vh;
 font : {
   size: 2vw;
+  family: 'dosis-medium', sans-serif;
+
 }
 text-transform: capitalize;
   text-align: center;
@@ -16,9 +28,42 @@ text-transform: capitalize;
 @mixin titreH3() {
   font : {
     size: 1.5vw;
+    family: 'dosis-medium', sans-serif;
+
   }
   text-transform: capitalize;
 }
+p{
+  font-family: 'dosis-light', sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 2vw;
+}
+h1 {
+
+  font : {
+    size: 2vw;
+    family: 'dosis-light', sans-serif;
+
+  }
+  letter-spacing: 1px;
+  line-height: 4vw;
+  font-weight: bold;
+  text-transform: capitalize;
+
+
+
+  text-shadow: 0 0 10px $light_fond;
+ //  animation: glowing 2s infinite alternate; /* Animation */
+}
+@keyframes glowing {
+  0% { text-shadow: 0 0 10px #fff,  0 0 70px $accent; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 30px $accent; }
+  100% { text-shadow: 0 0 10px #fff, 0 0 20px $accent; }
+}
+
+
 
 @mixin  bg() {
   background: linear-gradient(135deg, #F5A39F, #FAFAFA); /* Dégradé de fond */
@@ -33,3 +78,65 @@ text-transform: capitalize;
   max-height: 70px; /* Hauteur maximale de l'image */
 }
 
+.minusImage {
+
+  max-width: 40px; /* Largeur maximale de l'image */
+  max-height: 40px; /* Hauteur maximale de l'image */
+}
+.pad{
+  padding:0 2vw 0 2vw ;
+}
+
+
+
+
+                                                     /* CSS */
+.boutton {
+  align-items: center;
+  background-color: $light_fond;
+  background-position: 0 0;
+  border: 1px solid #FEE0E0;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 33.4929px;
+  padding: 2px 12px;
+
+  text-underline-offset: 1px;
+  transition: border .2s ease-in-out,box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.boutton:active,
+.boutton:hover,
+.boutton:focus {
+  outline: 0;
+}
+
+
+.boutton:active {
+  background-color: $accent;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: $light_fond;
+}
+
+.boutton:hover {
+  background-color: #FFE3E3;
+  border-color: #FAA4A4;
+}
+
+.boutton:active:hover,
+.boutton:focus:hover,
+.boutton:focus {
+  background-color: $accent;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: $light_fond;
+}

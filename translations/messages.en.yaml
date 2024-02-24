@@ -13,8 +13,8 @@ decouvrir: Discover Me
 formation: My Education
 
 formation_titre3: lp miaw
-formation_titre2: bts sio I & II
-formation_titre1: bts sio I & II
+formation_titre2: bts sio
+formation_titre1: bts sio
 
 formation_titre: Education Title
 formation_label: I am delighted to present an overview of my academic journey and learning experiences that have fueled my passion for Full Stack development. My education has served as a catalyst, providing a conducive environment for the growth of my skills and the refinement of my expertise in this dynamic field.
@@ -40,7 +40,7 @@ realisation_titre2: Artfull Code
 realisation_description2: An agency website
 realisation_titre3: B A Ba
 realisation_description3: Client website
-realisation_titre4: TrustWallet
+realisation_titre4: TaskWallet
 realisation_description4: A site that combines task and expense management
 
 competence: My Skills
@@ -55,3 +55,15 @@ contact_alertS: Message sent successfully
 envoie: Send
 
 voirPlus: See More
+
+
+accueil: Home
+formations: Trainings
+competences: Skills
+realisations: Achievements
+tel: Phone
+mail: Email
+mentions: Legal Notices
+contacts: Contact
+
+copyright : Realised by Victoria Tandamba

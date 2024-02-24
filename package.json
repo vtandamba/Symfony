@@ -30,6 +30,8 @@
     "animate.css": "^4.1.1",
     "core-js": "^3.35.1",
     "framer-motion": "^11.0.5",
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "hamburgers": "^1.2.1",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

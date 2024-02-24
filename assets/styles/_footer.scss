@@ -1,9 +1,8 @@
 @import "variables";
 .copyright{
   text-align: center;
- background-color: $accent;
+  background-color: $accent;
   height: 5vh;
-  border-radius: 20px 20px 0px 0px;
   position: relative;
   top: 146px;
   line-height: 32px;
@@ -13,11 +12,17 @@
 .formulaire{
   background-color: $light_fond;
   min-height: 50vh;
+  box-shadow: 0 0 20px $accent;
+
 }
 
 input[type="text"], input[type="email"], textarea {
   margin-top: 2vh;
   margin-bottom: 2vh;
+  text-align: left;
+  @extend .boutton;
+
+
 }
 button[type="submit"]{
   height: 5vh;

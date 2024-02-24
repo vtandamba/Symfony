@@ -1,0 +1,42 @@
+// style du main
+.section {
+  display: flex;
+  flex-direction: column;
+ // avant position: relative;
+ // avant z-index: auto;
+  margin-left: 15.5vw;
+  margin-right: 12vw;
+  // remonter la section main
+  // avant  bottom: 20vh;
+  width: inherit;
+  &__description {
+    text-align: center;
+    padding: 2vh 2vw;
+    margin: {
+      right: 10vw;
+      left: 10vw;
+      top: 3vw;
+      bottom: 3vw;
+
+    }
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+
+// style de formations
+.titresH2{
+  @include titreH2()
+}
+.titresH3{
+  @include titreH3()
+}
+#formation{
+    padding-top: 5vh;
+}.section-realisation{
+   padding-top:8vh;
+
+}.section-competence{
+  padding-top: 5vh;
+
+}

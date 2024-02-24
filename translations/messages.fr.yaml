@@ -16,8 +16,8 @@ decouvrir : Me découvrir
 formation: ma formation
 
 formation_titre3: lp miaw
-formation_titre2: bts sio I & II
-formation_titre1: bts sio I & II
+formation_titre2: bts sio
+formation_titre1: bts sio
 formation_label: Je suis ravie de vous présenter un aperçu de mon parcours académique 
                         et des expériences d'apprentissage qui ont nourri ma passion pour le 
                         développement Full Stack.Parcours a servi de catalyseur, offrant un terrain 
@@ -54,7 +54,7 @@ realisation_titre2: Artfull Code
 realisation_description2: un site d'agence
 realisation_titre3: B A Ba
 realisation_description3: site pour un client
-realisation_titre4: TrustWallet
+realisation_titre4: TaskWallet
 realisation_description4: un site qui combine votre gestion de tache et de dépense
 
 
@@ -74,3 +74,14 @@ contact_alertS: Message bien envoyé
 envoie: Envoyer
 
 voirPlus: Voir Plus
+
+
+accueil: Accueil
+formations: Formations
+competences: Compétences
+realisations: Réalisations
+tel: Tél
+mail: Mail
+mentions: Mentions Légales
+contacts: Contact
+copyright : Réalisé par Victoria Tandamba

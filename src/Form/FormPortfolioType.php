@@ -18,7 +18,7 @@ class FormPortfolioType extends AbstractType
             ->add('email', EmailType::class, ['attr' => ['class' => 'inputTexte'], 'label' => 'form.email'])
             ->add('object', TextType::class, ['attr' => ['class' => 'inputTexte'], 'label' => 'form.sujet'])
             ->add('message', TextareaType::class, ['attr' => ['class' => 'inputArea'], 'label' => 'form.message'])
-            ->add('submit', SubmitType::class, ['label' => 'form.submit'])
+            ->add('submit', SubmitType::class,['attr' => ['class' => 'boutton'],  'label' => 'form.submit'])
             ->setAttribute('class', 'formulaire');
     }
 

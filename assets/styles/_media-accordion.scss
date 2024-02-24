@@ -1,0 +1,80 @@
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $light_fond;
+  padding: 2vw;
+  margin-bottom: 15vh;
+
+}
+
+.uneFormation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  &:not(:last-child)
+  {
+    padding-bottom: 2vh;
+
+    border-bottom:1.5px solid $boder_line;
+  }
+  &:not(:first-child){
+    padding-top: 2vh;
+  }
+}
+
+.resume, .lesdetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.resume{
+
+  padding: 2vh 2vw;
+  margin-bottom: -5vh;
+   transition: transform 0.3s ease;
+
+  &:hover{
+    transform: scale(1.03);
+  }
+
+}
+
+
+
+.resume__gauche, .resume__droite, .lesdetails__gauche, .lesdetails__droite {
+  flex: 0 0 49%;
+}
+
+.resume__titre, .resume__statut, .details__description {
+  margin: 0;
+  padding: 0.5vw;
+}
+.details__description {
+
+}
+
+input[type="radio"] {
+  appearance: none;
+  position: fixed;
+  top: -100vh; left: -100vh;
+
+  & ~ div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    padding-left: 2vw;
+
+  }
+
+  &:checked ~ div {
+    max-height: 200px;
+    padding-left: 2vw;
+  }
+}
+/* Styles pour les labels des boutons radio */
+input[type="radio"] + label {
+  cursor: pointer;
+  padding-left: 2vw;
+}

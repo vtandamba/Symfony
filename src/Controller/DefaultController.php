@@ -20,7 +20,7 @@ class DefaultController extends AbstractController
         return $this->processFormAndRenderView($request, $mailer, $translator);
     }
 
-    #[Route('/{_locale<%app.supported_locales%>}/', name: 'app_default')]
+    #[Route(' /{_locale<%app.supported_locales%>}/', name: 'app_default')]
     public function index(Request $request, MailerInterface $mailer, TranslatorInterface $translator): Response
     {
         return $this->processFormAndRenderView($request, $mailer, $translator);

@@ -1,4 +1,3 @@
-
 .nav {
    padding-right: 1%;
   height: 10vh;
@@ -20,7 +19,7 @@
     top: 0;
   &:hover{
     cursor: pointer;
-
+   
   }
     &::before {
       content: '\2261';
@@ -28,9 +27,8 @@
   }
   &__menu {
     position: fixed;
-    width: 12vw;
+    width: 15vw;
     height: 100vh;
-
     z-index: 1;
     background: $accent;
     left: -50vW;
@@ -45,7 +43,6 @@
   &__input {
     display: none;
     &:checked~.nav__menu {
-      padding: 1vw;
       /* etat final*/
       left: 0;
 

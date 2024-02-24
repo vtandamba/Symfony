@@ -1,5 +1,35 @@
 @import "variables";
 
+// style du main
+.section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: auto;
+  margin-left: 15.5vw;
+  margin-right: 12vw;
+  // remonter la section main
+  bottom: 20vh;
+  width: inherit;
+  &__description {
+    text-align: center;
+    margin: {
+      right: 10vw;
+      left: 10vw;
+      top: 3vw;
+      bottom: 3vw;
+    }
+  }
+}
+
+
+// style de formations
+.titresH2{
+  @include titreH2()
+}
+.titresH3{
+  @include titreH3()
+ }
 
 
 

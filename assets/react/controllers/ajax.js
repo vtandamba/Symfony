@@ -40,3 +40,32 @@ for (let i = 0; i < numCubes; i++) {
 
     body.appendChild(cube);
 }
+
+
+//
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggle-details .label__titre');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const details = this.closest('.intitule').querySelector('.details');
+            details.classList.toggle('collapsed');
+        });
+    });
+});
+//
+const articles = document.querySelectorAll('.intitule');
+
+articles.forEach(article => {
+    const label = article.querySelector('.label');
+    const image = article.querySelector('.petiteImage');
+    const detail = article.querySelector('.details__description');
+
+    label.addEventListener('click', () => {
+        console.log('ccc')
+
+        image.classList.toggle('hide');
+        detail.classList.toggle('hide');
+
+    });
+});

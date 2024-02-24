@@ -3,14 +3,14 @@
 {% block body %}
 
     <header class="header">
-        <section class="header__intro intro">
+        <section class="header__intro intro" id="intro">
             <div class="intro__textes">
                 <h1 class="intro__titre " >Victoria Tandamba
                 Développeuse Full Stack </h1>
                 <p class="intro__texte"> {{ 'profil'|trans }} </p>
-
-                <div class="animate__animated animate__bounceIn" {{ react_component('Button', { 'contenue': 'decouvrir'|trans } ) }}>
-            </div>
+                <a href="#formation">
+                <div  class=" intro__boutton animate__animated animate__bounceIn" {{ react_component('Button', { 'contenue': 'decouvrir'|trans } ) }}>
+            </div></a>
 
 </div>
             <img class="intro__image animate__animated animate__bounceIn" src="{{ asset('build/images/profil.png') }}" alt="profil">
@@ -18,8 +18,15 @@
 
 
         <section class="header__resumer resumer nav">
+            <div class="hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+
+
             <input class="nav__input" type="checkbox" id="icone-burger-close">
-            <label class="nav__button" for="icone-burger-close"></label>
+            <label class="nav__button  " for="icone-burger-close"></label>
 
 <div class="nav__menu">
     {# reseau sociaux #}
@@ -74,10 +81,12 @@
 
 
         <section class="header__menu menu ">
+
+
             <img src="" alt="">
             <nav>
-
                 <ul class="ul">
+
                     <li class="li">
                         <a class="social-button social-button--linkedin a" href="{{ path('app_default') }}">
                          <p class="menu__icones" {{ react_component('HomeIcone') }}>  </p>
@@ -109,6 +118,23 @@
                         </a>
                     </li>
 
+
+
+                    <li class="li">
+                        <a href="" >  <div class="language-button social-button social-button--linkedin a ">
+
+                            <!-- Icône du bouton de langue -->
+                            <p class="menu__icones" {{ react_component('LangIcone') }}></p>
+                            <!-- Liste déroulante des langues -->
+
+                            <ul class="language-dropdown span">
+                                <!-- Option pour la langue anglaise -->
+                                <li><a href="{{ path('app_default', {_locale: 'en'}) }}"><img class="petiteImage" src="{{ asset('build/images/en.789ff1da.png') }}" alt=""></a></li>
+                                <!-- Option pour la langue française -->
+                                <li><a href="{{ path('app_default', {_locale: 'fr'}) }}"><img class="petiteImage" src="{{ asset('build/images/fr.8f0a36c6.png') }}" alt=""></a></li>
+                            </ul>
+                        </div> </a>
+                    </li>
                     <li class="li">
                         <a class="social-button social-button--linkedin a" href="tel:0651850924">
                             <p class="menu__icones" {{ react_component('TelIcone') }}>  </p>
@@ -127,73 +153,110 @@
                             <span>{{ 'mentions'|trans }}</span>
                         </a>
                     </li>
-                </ul>
 
+
+                </ul>
             </nav>
         </section>
 
     </header>
+
+
     <main class="section" >
-        <!-- formation -->
-        <h2 class="titresH2" id="formation"> {{ 'formation'|trans }} </h2>
-        <p class="section__description"> {{ 'formation_label'|trans }} </p>
 
-        <section class="formation" >
 
-            <!-- formation presentation -->
-            <article class="intitule">
-                <div class="intitule__label label ">
-                    <h3 class="label__titre titresH3">{{ 'formation_titre3'|trans }} </h3>
-                    <p class="label__statut"> {{ 'statut3'|trans }} <span class="label__annee">2023 - 2024</span> </p>
-                    <img class="petiteImage"   src="{{ asset('build/images/R.027cf6fd.png') }}" alt="">
-                </div>
 
-                <div class="intitule__details details">
-                    <h3 class="details__titre titresH3">{{ 'formation_description3'|trans }} </h3>
-                    <p class="details__description">  {{ 'formation_texte3'|trans }}
-                    </p>
+        <h2 class="titresH2 animate__fadeInDown" id="formation" > {{ 'formation'|trans }} </h2>
+        <p class="section__description" id="section__description"> {{ 'formation_label'|trans }} </p>
+
+        <section class="accordion section-formation" >
+            <article class="uneFormation">
+                <input type="radio" id="article1" name="articles">
+                <label for="article1" class="resume">
+                    <div class="resume__gauche">
+                        <h3 class="resume__titre titresH3">{{ 'formation_titre3'|trans }} </h3>
+                        <p class="resume__statut"> {{ 'statut3'|trans }} <span class="label__annee">2021 - 2023</span> </p>
+                    </div>
+
+                    <div class="resume-formation__droite">
+                        <h3 class="resume-formation__titre titresH3">{{ 'formation_description3'|trans }} </h3>
+
+                    </div>
+
+                </label>
+
+                <div  class="lesdetails">
+                    <div class="lesdetails__gauche">
+                        <img class="petiteImage"   src="{{ asset('build/images/R.027cf6fd.png') }}" alt="">
+                    </div>
+                    <div class="lesdetails__droite">
+                        <p class="details__description">  {{ 'formation_texte3'|trans }}
+                        </p>
+                    </div>
+
                 </div>
             </article>
 
-            <article class="intitule">
-                <div class="intitule__label label ">
-                    <h3 class="label__titre titresH3">{{ 'formation_titre2'|trans }} </h3>
-                    <p class="label__statut"> {{ 'statut2'|trans }} <span class="label__annee">2021 - 2023</span> </p>
-                    <img class="petiteImage" src="{{ asset('build/images/futaie.4802bd75.jpg') }}" alt="">
-                    <img class="petiteImage" src="{{ asset('build/images/sorefa.bd610119.png') }}" alt="">
+            <article class="uneFormation">
+                <input type="radio" id="article2" name="articles">
+                <label for="article2"  class="resume">
+                    <div class="resume__gauche">
+                        <h3 class="resume__titre titresH3">{{ 'formation_titre2'|trans }} </h3>
+                        <p class="resume__statut"> {{ 'statut2'|trans }} <span class="label__annee">2021 - 2023</span> </p>
+                    </div>
+                    <div class="resume-formation__droite">
+                        <h3 class="resume-formation__titre titresH3">{{ 'formation_description2'|trans }} </h3>
 
-                </div>
+                    </div>
 
-                <div class="intitule__details details">
-                    <h3 class="details__titre titresH3">{{ 'formation_description2'|trans }} </h3>
-                    <p class="details__description">  {{ 'formation_texte2'|trans }}
-                    </p>
+                </label>
+                <div   class="lesdetails">
+                    <div class="lesdetails__gauche">
+                        <img class="petiteImage" src="{{ asset('build/images/futaie.4802bd75.jpg') }}" alt="">
+                        <img class="petiteImage" src="{{ asset('build/images/sorefa.bd610119.png') }}" alt="">
+                    </div>
+                    <div class="lesdetails__droite">
+                        <p class="details__description">  {{ 'formation_texte2'|trans }}
+                        </p>
+                    </div>
+
                 </div>
             </article>
 
-            <article class="intitule">
-                <div class="intitule__label label ">
-                    <h3 class="label__titre titresH3">{{ 'formation_titre1'|trans }} </h3>
-                    <p class="label__statut"> {{ 'statut1'|trans }} <span class="label__annee">2021 - 2023</span> </p>
-                    <img class="petiteImage" src="{{ asset('build/images/futaie.4802bd75.jpg') }}" alt="">
+            <article class="uneFormation">
+                <input type="radio" id="article3" name="articles">
+                <label for="article3"  class="resume">
+                    <div class="resume__gauche">
+                        <h3 class="resume__titre titresH3">{{ 'formation_titre1'|trans }} </h3>
+                        <p class="resume__statut"> {{ 'statut1'|trans }} <span class="label__annee">2021 - 2023</span> </p>
+                    </div>
+                    <div class="resume-formation__droite">
+                        <h3 class="resume-formation__titre titresH3">{{ 'formation_description1'|trans }} </h3>
 
-                </div>
+                    </div>
 
-                <div class="intitule__details details">
-                    <h3 class="details__titre titresH3">{{ 'formation_description1'|trans }} </h3>
-                    <p class="details__description">  {{ 'formation_texte1'|trans }}
+                </label>
+                <div   class="lesdetails">
+                    <div class="lesdetails__gauche">
+                        <img class="petiteImage" src="{{ asset('build/images/futaie.4802bd75.jpg') }}" alt="">
+                    </div>
+                    <div class="lesdetails__droite">
+                        <p class="details__description">  {{ 'formation_texte1'|trans }}
+                        </p>
+                    </div>
 
-                    </p>
                 </div>
             </article>
         </section>
 
-    <!-- competences -->
-        <!-- compétences presentation -->
-        <h2 class="titresH2" id="competence"> {{'compétences'|trans}} </h2>
-        <p class="section__description" >{{ 'competence_label'|trans }}</p>
 
-        <section class="competences" >
+
+
+
+    <!-- competences -->
+        <h2 class="titresH2" id="competence"> {{'competences'|trans}} </h2>
+        <p class="section__description " id="section__description" >{{ 'competence_label'|trans }}</p>
+        <section class="competences section-competences"  >
 
         <!-- competences listes -->
 
@@ -266,18 +329,17 @@
 
 
         <!-- realisations -->
-        <!-- realisation presentation -->
 
         <h2 class="titresH2" id="realisation"> {{ 'realisation'|trans }}</h2>
-        <p class="section__description">{{ 'realisation_label'|trans}}</p>
+        <p class="section__description" id="section__description">{{ 'realisation_label'|trans}}</p>
 
-        <section class="realisations">
+        <section class="realisations section-realisation"  >
             <figure class="realisation">
                 <img class="realisation__image" src="{{ asset('build/images/ptojet1.73f0319c.png') }}" alt="réalisation">
                 <figcaption class="realisation__legende">
                     <h3 class="titresH3">{{ 'realisation_titre1'|trans }}</h3>
                     <p class="realisation__description">{{ 'realisation_description1'|trans }}</p>
-                    <p class="realisation__technologies">Technologies utilisées : HTML, CSS, JavaScript</p>
+                    <p class="realisation__technologies">Technologies : HTML & SCSS, React, Symfony</p>
                 </figcaption>
             </figure>
 
@@ -286,7 +348,7 @@
                 <figcaption class="realisation__legende">
                     <h3 class="titresH3">{{ 'realisation_titre2'|trans }}</h3>
                     <p class="realisation__description">{{ 'realisation_description2'|trans }}</p>
-                    <p class="realisation__technologies">Technologies utilisées : HTML, CSS, JavaScript</p>
+                    <p class="realisation__technologies">Technologies : HTML & SCSS, React</p>
                 </figcaption>
             </figure>
 
@@ -295,7 +357,7 @@
                 <figcaption class="realisation__legende">
                     <h3 class="titresH3">{{ 'realisation_titre4'|trans }}</h3>
                     <p class="realisation__description">{{ 'realisation_description4'|trans }}</p>
-                    <p class="realisation__technologies">Technologies utilisées : HTML, CSS, JavaScript</p>
+                    <p class="realisation__technologies">Technologies : Django</p>
                 </figcaption>
             </figure>
 
@@ -306,7 +368,7 @@
 
 
     </main>
-    <footer class="section">
+    <footer class="section" id="contact">
         <h2 class="titresH2" >contactez - moi</h2>
         {#// alert a afficher suite à la soumission du formulaire
 
@@ -337,7 +399,7 @@
             <input type="submit" value="Valider"/>
         </form> #}
 
-        <p class="copyright">2024 @ Réalisé par Victoria Tandamba</p>
+        <p class="copyright">2024 @ {{ 'copyright'|trans }} </p>
     </footer>
 
 

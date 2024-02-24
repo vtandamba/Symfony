@@ -1,0 +1,79 @@
+/* Conteneur des compétences */
+.competences {
+  display: flex;
+  flex-wrap: wrap; /* Permettre le retour à la ligne des compétences */
+  justify-content: space-between; /* Répartir les compétences uniformément sur l'axe principal */
+  // overflow: hidden; /* Cacher les débordements */
+}
+
+/* Style des compétences */
+.competence {
+  background-color: $light_fond;
+  width: calc(33.33% - 10px); /* Calculer la largeur de chaque compétence pour qu'il occupe 1/3 de la largeur du conteneur */
+  min-height: 10vh;
+  text-align: center;
+  margin-bottom: 20px; /* Ajouter de l'espace entre les compétences */
+  padding: 3vh 5vw;
+  box-sizing: border-box; /* Inclure la bordure et le padding dans le calcul de la largeur */
+}
+
+//   /* Animation pour faire défiler vers la droite */
+//   @keyframes scrollRight {
+//     0% { transform: translateX(0); } /* Début du défilement */
+//     100% { transform: translateX(-100%); } /* Fin du défilement */
+//   }
+//
+//   /* Animation pour faire défiler vers la gauche */
+//   @keyframes scrollLeft {
+//     0% { transform: translateX(0); } /* Début du défilement */
+//     100% { transform: translateX(100%); } /* Fin du défilement */
+//   }
+//
+//   /* Appliquer l'animation scrollRight aux compétences de la première ligne */
+//   .competence:nth-child(-n+3) {
+//     animation: 30s linear infinite scrollRight; /* Appliquer l'animation aux 3 premières compétences */
+//   }
+//
+//   /* Appliquer l'animation scrollLeft aux compétences de la deuxième ligne */
+//   .competence:nth-last-child(-n+3) {
+//     animation: 30s linear infinite scrollLeft; /* Appliquer l'animation aux 3 dernières compétences */
+//   }
+//
+
+
+.competence {
+  position: relative; /* Assurez-vous que les éléments enfants positionnés sont relativement positionnés par rapport à ce conteneur */
+  box-shadow: 0 0 20px $fond;
+}
+
+.competence::before {
+  content: ''; /* Ajoute un élément pseudo-contenu pour représenter l'émission de lumière */
+  position: absolute; /* Positionne l'élément pseudo-contenu par rapport à son parent */
+  top: 50%; /* Déplace l'élément pseudo-contenu à mi-chemin verticalement */
+  left: 50%; /* Déplace l'élément pseudo-contenu à mi-chemin horizontalement */
+  transform: translate(-50%, -50%); /* Centre l'élément pseudo-contenu */
+  width: 100%; /* Définit la largeur de l'élément pseudo-contenu à 100% de son parent */
+  height: 100%; /* Définit la hauteur de l'élément pseudo-contenu à 100% de son parent */
+  background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente pour l'émission de lumière */
+  border-radius: 50%; /* Ajoute un effet de bord arrondi pour l'émission de lumière */
+  opacity: 0; /* Initialise l'opacité à 0 pour l'effet d'animation */
+  transition: opacity 0.3s ease; /* Ajoute une transition d'opacité fluide */
+}
+
+.competence:hover::before {
+  opacity: 1; /* Augmente l'opacité de l'élément pseudo-contenu lorsqu'il est survolé */
+}
+
+.competence:hover {
+  transition: transform 0.5s ease;
+  border: 1px solid $accent;
+  box-shadow: 0 0 20px $accent; /* Ajoute une ombre autour de l'élément survolé pour simuler l'émission de lumière */
+}
+
+.competence img {
+  transition: transform 0.5s ease; /* Ajoute une transition fluide pour l'effet de rétrécissement */
+}
+
+.competence:hover img {
+  transform: scale(0.9); /* Réduit la taille de l'image lorsqu'elle est survolée */
+}
