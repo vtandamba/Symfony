@@ -1,54 +1,84 @@
-@media screen and (width < 667px) {
+@media only screen and (max-width: 768px) {
   .header {
-    &__intro{
+    flex-direction: column-reverse; // Pour changer l'ordre des éléments dans le header
+    align-items: center;
 
-      min-height: 40vh;
+    &__intro {
+      min-height: auto; // Supprimer la hauteur minimale
       order: 2;
-      background-color: #F5A39F;
-      padding-top: 11vw;
-      padding-right: 5vw;
-      padding-left: 5vw;
-      padding-bottom: 5vw;
+      padding: 2vw; // Réduire l'espacement intérieur
     }
 
+    &__resumer {
+      flex-basis: auto; // Supprimer la largeur fixe
+      order: 1;
+      margin: 0; // Réinitialiser les marges
+    }
 
+    &__menu {
+      min-height: auto; // Supprimer la hauteur minimale
+      order: 3;
+      margin: 0; // Réinitialiser les marges
+      width: 100%; // Occuper toute la largeur
+      position: relative; // Réinitialiser la position
+      top: auto;
+      left: auto;
+      right: auto;
+      background-color: transparent; // Supprimer la couleur de fond
+    }
   }
-.intro{
-  &__bouton{
-    width: 15vw;
-    min-height: 2vh;
-    margin-top: 5vh;
-  }
-  &__texte{
 
+  .intro {
+    margin-right: 0; // Réinitialiser la marge
+    text-align: center;
 
-    font-size: 3vw;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 5vw;
+    &__titre {
+      width: 100%; // Occuper toute la largeur
+    }
+
+    &__image {
+      width: 70vw; // Adapter la largeur à l'écran du téléphone
+      height: auto; // Hauteur automatique pour maintenir les proportions
+    }
+
+    &__textes {
+      width: 100%; // Occuper toute la largeur
+      margin-right: 0; // Réinitialiser la marge
+    }
   }
-  &__titre{
-    margin-bottom: 12vw;
-    font-size: 4.5vw;
-    line-height: 3vh;
+
+  .menu {
+    &__icones {
+      width: 100%; // Occuper toute la largeur
+      margin-top: 1rem; // Réduire l'espacement en haut
+    }
+
+    .li {
+      margin-top: 0.5rem; // Réduire l'espacement entre les éléments de menu
+    }
   }
-  &__image{
-    min-width: 20vw;
-    height: 13vh;
-    min-height: 15vh;
-    margin-right: -1vw;
+
+  .social-button {
+    width: 50px; // Réduire la taille du bouton
+    height: 50px;
+    padding: 10px; // Réduire le rembourrage
+    font-size: 24px; // Réduire la taille de la police
   }
 }
 
 
-  .nav__button{
-    display: none;
-  }
-}
-@media screen and (width > 667px) {}
+
+
+@media screen and (width > 768px) {}
 
 
 
 @media screen and (width > 1200px) {
+  .header{
+  &__intro {
+ flex-basis: 100%;
 
+  }
+
+  }
 }
