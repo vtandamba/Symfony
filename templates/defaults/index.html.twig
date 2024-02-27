@@ -31,7 +31,7 @@
 <div class="nav__menu">
     {# reseau sociaux #}
     <div class="social-buttons">
-        <a href="#"  class="social-button social-button--linkedin" aria-label="LinkedIn"  {{ react_component('InIcone') }}>
+        <a href="https://www.linkedin.com/in/victoria-tandamba"  class="social-button social-button--linkedin" aria-label="LinkedIn"  {{ react_component('InIcone') }}>
         </a>
         <a href="#" class="social-button social-button--github" aria-label="GitHub" {{ react_component('GitIcone') }}>
         </a>
@@ -73,7 +73,9 @@
         </div>
     </div> {# intérets #}
 
-    <div {{ react_component('DownloadButton', {'contenue': 'cv'|trans}) }}> </div>
+    <a href="{{ asset('assets/files/cv_Victoria_Tandamba.pdf') }}" download="cv_Victoria_Tandamba.pdf"> <div id="downloadButton" {{ react_component('DownloadButton', {'contenue': 'cv'|trans}) }}>
+    </div>
+        </a>
 </div>
 
          </section>
